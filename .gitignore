@@ -1,0 +1,10 @@
+# Project exclude paths
+/__tests__/transformer/can-component.js
+/__tests__/transformer/can-stache.js
+/__tests__/transformer/can-stache-element.js
+/__tests__/transformer/inline-stache.js
+/__tests__/transformer/modules.spec.js
+/__tests__/parse.js
+/__tests__/stache.js
+/node_modules/
+/jest.config.js
