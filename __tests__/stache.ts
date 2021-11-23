@@ -1,4 +1,4 @@
-import {parse, createExpression} from "../src/stache";
+import {parse, createExpression} from "../dist/stache";
 
 describe("parse", () => {
   it("produces a AST from a stache template", () => {

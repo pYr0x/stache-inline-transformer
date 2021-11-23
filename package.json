@@ -1,26 +1,47 @@
 {
   "name": "stache-inline-transformer",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pYr0x/stache-inline-transformer.git"
   },
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "",
+    "preversion": "",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "author": "Julian Kern",
+  "license": "MIT",
   "dependencies": {
-    "acorn": "^8.1.0",
+    "acorn": "^8.6.0",
     "acorn-class-fields": "^1.0.0",
     "acorn-static-class-features": "^1.0.0",
-    "acorn-walk": "^8.0.2",
-    "astring": "^1.7.0",
+    "acorn-walk": "^8.2.0",
+    "astring": "^1.8.1",
     "can-stache-ast": "^1.1.0"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.22",
-    "jest": "^26.6.3",
-    "ts-node": "^9.1.1",
-    "ts-jest": "^26.5.4",
-    "typescript": "^4.2.3"
+    "@movable/eslint-config": "^2.0.0",
+    "@movable/eslint-config-typescript": "^1.0.1",
+    "@types/estree": "0.0.50",
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "eslint": "^8.3.0",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
   }
 }

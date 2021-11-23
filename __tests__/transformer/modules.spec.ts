@@ -1,6 +1,5 @@
-import modules from "../../src/transformer/modules";
+import modules from "../../dist/transformer/modules";
 import { promises as fs } from "fs"
-import path from "path";
 
 describe("transformer", () => {
   it("find a can-stache-element transformer", async () => {

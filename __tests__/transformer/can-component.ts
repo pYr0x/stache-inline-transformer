@@ -1,11 +1,10 @@
-import transform from "../../src/transformer/can-component";
-import {default as transformAll} from "../../src/index";
+import transform from "../../dist/transformer/can-component";
+import {default as transformAll} from "../../dist/index";
 import { promises as fs } from "fs"
-import whichModules from "../../src/transformer/modules";
-import parse from "../../src/parse";
+import whichModules from "../../dist/transformer/modules";
+import parse from "../../dist/parse";
 import {simple} from "acorn-walk";
-import codeGeneration from "../../src/generator";
-import {parse as stache} from "../../src/stache";
+import {parse as stache} from "../../dist/stache";
 
 describe("can-component", () => {
   it("transform into ArrayExpression", async () => {

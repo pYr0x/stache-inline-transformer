@@ -1,6 +1,5 @@
 import { promises as fs } from "fs"
-import path from "path";
-import parse from "../src/parse";
+import parse from "../dist/parse";
 import whichModules from "../src/transformer/modules";
 
 describe("parse", () => {

@@ -8,3 +8,4 @@
 /__tests__/stache.js
 /node_modules/
 /jest.config.js
+/dist/
