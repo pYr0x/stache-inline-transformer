@@ -15,13 +15,21 @@ function transform(ast: Node, comments: Array<any>): Node {
             Literal(currentNode, state: Array<any>) {
               if (currentNode === node.node) {
                 const parent = state[state.length - 2]
-                parent.init = expression
+                if(parent.type === 'AssignmentExpression') {
+                  parent.right = expression
+                }else if(parent.type === 'VariableDeclarator'){
+                  parent.init = expression
+                }
               }
             },
             TemplateLiteral(currentNode, state: Array<any>) {
               if (currentNode === node.node) {
                 const parent = state[state.length - 2]
-                parent.init = expression
+                if(parent.type === 'AssignmentExpression') {
+                  parent.right = expression
+                }else if(parent.type === 'VariableDeclarator'){
+                  parent.init = expression
+                }
               }
             }
           })

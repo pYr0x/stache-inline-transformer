@@ -38,3 +38,17 @@ describe("inline stache", () => {
     expect(newCode).toEqual(expect.stringContaining(objectRepresentation));
   })
 })
+
+describe("inline stache variable assignment", () => {
+  it("generate code", async () => {
+    const code = await fs.readFile("__tests__/files/inline-stache-assignment.js", {encoding: "utf-8"});
+    const {ast, comments} = parse(code, whichModules(code))
+    const newAST = transform(ast, comments)
+    let  newCode = codeGeneration(newAST).replace(/(\r\n|\n|\r)/gm, "").replace(/\s/g,'');
+
+    const stacheAST = stache("<h1>Hello_{{world}}</h1>");
+    const objectRepresentation = JSON.stringify(stacheAST.intermediate);
+
+    expect(newCode).toEqual(expect.stringContaining(objectRepresentation));
+  })
+})

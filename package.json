@@ -1,6 +1,6 @@
 {
   "name": "stache-inline-transformer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "type": "commonjs",
   "main": "dist/index.js",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && jest",
+    "test": "npm run build && jest --coverage",
     "prepare": "npm run build",
     "prepublishOnly": "",
     "preversion": "",
